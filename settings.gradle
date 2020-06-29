@@ -23,5 +23,6 @@ include 'nitrite-jackson-mapper'
 include 'nitrite-spatial'
 include 'nitrite-replication'
 include 'nitrite-support'
+include 'nitrite-filter'
 include 'potassium-nitrite'
 
