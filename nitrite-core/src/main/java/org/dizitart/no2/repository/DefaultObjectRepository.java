@@ -37,13 +37,13 @@ import static org.dizitart.no2.common.util.ValidationUtils.notNull;
 /**
  * @author Anindya Chatterjee
  */
-class DefaultObjectRepository<T> implements ObjectRepository<T> {
+public class DefaultObjectRepository<T> implements ObjectRepository<T> {
     private final NitriteCollection collection;
     private final Class<T> type;
     private NitriteMapper nitriteMapper;
     private RepositoryOperations operations;
 
-    DefaultObjectRepository(Class<T> type,
+    public DefaultObjectRepository(Class<T> type,
                             NitriteCollection collection,
                             NitriteConfig nitriteConfig) {
         this.type = type;

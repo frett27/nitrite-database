@@ -101,9 +101,14 @@ class MVStoreUtils {
                 throw new NitriteIOException("unable to create database file", iae);
             } finally {
                 if (store != null) {
-                    store.setRetentionTime(-1);
-                    store.setVersionsToKeep(2);
-                    store.setReuseSpace(true);
+                    // store.setRetentionTime(-1);
+                    store.setVersionsToKeep(1);
+                    // store.setReuseSpace(true);
+                    store.setAutoCommitDelay(100);
+                    
+                    
+                    //store.setCacheSize(100);
+
                 }
             }
 
@@ -179,6 +184,9 @@ class MVStoreUtils {
 
         // auto compact disabled github issue #41
         builder.autoCompactFillRate(0);
+        
+     
+        builder.pageSplitSize(200_000);
 
         return builder;
     }

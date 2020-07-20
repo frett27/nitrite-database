@@ -83,6 +83,12 @@ public interface NitriteStore extends NitritePlugin, AutoCloseable {
      */
     void commit();
 
+    
+    /**
+     * compact store
+     */
+    void compact();
+    
     /**
      * Closes the file and the store. Unsaved changes are written to disk first.
      */

@@ -119,7 +119,8 @@ public interface ObjectRepository<T> extends PersistentCollection<T> {
             Collections.addAll(itemList, others);
         }
 
-        return insert(Iterables.toArray(itemList, getType()));
+        T[] array = Iterables.toArray(itemList, getType());
+		return insert(array);
     }
 
     /**

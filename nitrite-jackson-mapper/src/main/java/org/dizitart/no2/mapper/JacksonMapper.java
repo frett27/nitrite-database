@@ -44,7 +44,7 @@ public class JacksonMapper extends MappableMapper {
     private List<JacksonModule> jacksonModules;
     private List<Class<?>> moduleTypes;
 
-    @Getter(AccessLevel.PROTECTED)
+    @Getter(AccessLevel.PUBLIC)
     private ObjectMapper objectMapper;
 
     public JacksonMapper() {
