@@ -31,16 +31,16 @@ jar {
 
 dependencies {
     implementation project(':nitrite-core')
-    implementation "org.slf4j:slf4j-api:$slf4jVersion"
-    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    implementation "org.slf4j:slf4j-api:1.7.30"
+    annotationProcessor "org.projectlombok:lombok:1.18.12"
     
     // https://mvnrepository.com/artifact/org.antlr/antlr4-runtime
     implementation group: 'org.antlr', name: 'antlr4-runtime', version: '4.8-1'
     implementation group: 'org.antlr', name: 'antlr4', version: '4.8-1'
     antlr "org.antlr:antlr4:4.8-1" // use ANTLR version 4	
 
-    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
-    testImplementation "junit:junit:$junitVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.12"
+    testImplementation "junit:junit:4.13"
 }
 
 test {
