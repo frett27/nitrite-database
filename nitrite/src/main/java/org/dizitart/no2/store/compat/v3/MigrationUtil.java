@@ -16,22 +16,27 @@
 
 package org.dizitart.no2.store.compat.v3;
 
+import static org.dizitart.no2.common.Constants.STORE_INFO;
+import static org.dizitart.no2.common.util.ObjectUtils.convertToObjectArray;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentSkipListSet;
+
 import org.dizitart.no2.collection.Document;
 import org.dizitart.no2.collection.NitriteId;
 import org.dizitart.no2.collection.meta.Attributes;
 import org.dizitart.no2.exceptions.NitriteIOException;
 import org.dizitart.no2.exceptions.ValidationException;
 import org.dizitart.no2.index.IndexEntry;
-import org.dizitart.no2.store.IndexMeta;
+import org.dizitart.no2.index.IndexMeta;
 import org.dizitart.no2.store.UserCredential;
 import org.h2.mvstore.MVMap;
 import org.h2.mvstore.MVStore;
-
-import java.util.*;
-import java.util.concurrent.ConcurrentSkipListSet;
-
-import static org.dizitart.no2.common.Constants.STORE_INFO;
-import static org.dizitart.no2.common.util.ObjectUtils.convertToObjectArray;
 
 /**
  * An utility class to migrate the.
